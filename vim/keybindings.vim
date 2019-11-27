@@ -21,7 +21,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " Buffer management
-nnoremap <leader><leader> <c-^>
+nnoremap <leader>t <c-^>
 nnoremap <leader>bn :bn<cr>
 nnoremap <leader>bp :bp<cr>
 nnoremap <leader>bd :bd<cr>
