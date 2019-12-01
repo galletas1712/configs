@@ -29,8 +29,9 @@
 * C-b h,j,k,l to move between panes
 * C-b : swap-pane -t 0 -s 1 to swap panes where 0, 1 are pane numbers (use C-b q to reveal pane numbers)
 * C-b : swap-window -t 0 -s 1
-* C-b v to split window into vertical panes
-* C-b b to split window into horizontal panes
+* C-b | to split window into vertical panes
+* C-b _ to split window into horizontal panes
+* C_b < or > to swap panes
 * C-d to exit!
 
 ## Misc controls
