@@ -126,3 +126,6 @@ nnoremap <silent> <leader><leader>j  :<C-u>CocNext<CR>
 nnoremap <silent> <leader><leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <leader><leader>p  :<C-u>CocListResume<CR>
+
+" Disable auto-pair quotes for vim
+autocmd FileType vim let b:coc_pairs_disabled = ['"']

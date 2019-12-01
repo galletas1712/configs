@@ -1,7 +1,15 @@
 # Coc
-* Coc.nvim requires node and possibly yarn. Install them
+* Coc needs node, npm, and yarn
+* Coc needs coc-settings.json in .vim
 * Coc.nvim doesn't seem to work on Neovim (at least not 0.4.3)
+* Installed plugins
+    * coc-json
+    * coc-pairs
+    * coc-rls
+    * coc-tslint-plugin
+    * coc-tsserver
 ## Coc rust
+* **Will attempt to install RLS. READ DIERECTIONS CAREFULLY**
 * https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file
 * https://github.com/neoclide/coc-rls
 * https://github.com/neoclide/coc.nvim/wiki/Language-servers
@@ -9,3 +17,5 @@
 * .vim coc settings is very very very important for initial install and eliminating annoying lag time to check
 * coc.vim keybindings are <leader><leader> prefixed
 ** BE SURE TO UPLOAD TO REPO LATER **
+## Coc TS
+* Install coc-tsserver, coc-tslint-plugin
