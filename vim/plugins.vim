@@ -15,4 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'rust-lang/rust.vim' " Requires further setup
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Requires further setup
 Plug 'leafgarland/typescript-vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()

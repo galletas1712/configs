@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype plugin on
 
 " Load configurations {
     let repo_dir = $HOME . '/configs/'
