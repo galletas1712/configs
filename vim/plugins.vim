@@ -1,10 +1,12 @@
 call plug#begin('~/.vim/plugged')
 " GUI
-Plug 'flrnprz/candid.vim' " Requires further setup -- just add the file to .vim (or rtp)
+" Plug 'flrnprz/candid.vim' " Requires further setup -- just add the file to .vim (or rtp)
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Editor behaviors
 Plug 'andymass/vim-matchup'
 Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-commentary'
 
 " Editor tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

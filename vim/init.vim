@@ -27,7 +27,7 @@ set relativenumber
 set mouse=a
 syntax on
 set background=dark
-colorscheme candid
+colorscheme palenight
 
 " Plugin settings
 let g:rustfmt_autosave = 1

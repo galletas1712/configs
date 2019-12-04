@@ -129,3 +129,4 @@ nnoremap <silent> <leader><leader>p  :<C-u>CocListResume<CR>
 
 " Disable auto-pair quotes for vim
 autocmd FileType vim let b:coc_pairs_disabled = ['"']
+autocmd FileType rust let b:coc_pairs_disabled = ["'"]

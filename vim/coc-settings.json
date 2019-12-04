@@ -8,4 +8,12 @@
     },
     "rust.wait_to_build": 0,
     "tslint.jsEnable": true,
+    "pairs.enableCharacters": [
+        "(",
+        "[",
+        "{",
+        "'",
+        "\"",
+        "`"
+    ]
 }
