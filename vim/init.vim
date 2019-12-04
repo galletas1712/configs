@@ -19,6 +19,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
+set ttimeoutlen=100
 
 " GUI settings
 set number
