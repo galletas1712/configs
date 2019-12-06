@@ -24,11 +24,11 @@ inoremap <right> <nop>
 " TODO
 
 " Buffer management
-nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bp :bp<cr>
-nnoremap <leader>bd :bd<cr>
+" nnoremap <leader>bn :bn<cr>
+" nnoremap <leader>bp :bp<cr>
+" nnoremap <leader>bd :bd<cr>
 
-" Quick actions 
+" Quick actions
 nnoremap <leader>w :w<cr>
 nnoremap <leader>e :wq<cr>
 nnoremap <leader>qq :q!<cr>
