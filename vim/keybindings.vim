@@ -6,6 +6,9 @@ let mapleader = "\<Space>"
 " Consider changing to recursive?
 nnoremap ; :
 
+" FZF
+nnoremap <leader>fo :Files<cr>
+
 " Stop search
 vnoremap <c-h> :nohlsearch<cr>
 nnoremap <c-h> :nohlsearch<cr>
@@ -24,9 +27,14 @@ inoremap <right> <nop>
 " TODO
 
 " Buffer management
-" nnoremap <leader>bn :bn<cr>
-" nnoremap <leader>bp :bp<cr>
-" nnoremap <leader>bd :bd<cr>
+nnoremap <leader>bn :bn<cr>
+nnoremap <leader>bp :bp<cr>
+nnoremap <leader>bd :bd<cr>
+
+" Tab management
+nnoremap <leader>tp :tabprevious<cr>
+nnoremap <leader>tn :tabnext<cr>
+nnoremap <leader>tc :tabnew<cr>
 
 " Quick actions
 nnoremap <leader>w :w<cr>
