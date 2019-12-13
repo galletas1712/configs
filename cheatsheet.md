@@ -36,3 +36,6 @@
 
 ## Misc controls
 * C-b r to reload config file
+
+# Alacritty
+**SF Mono Font needs be externally installed**

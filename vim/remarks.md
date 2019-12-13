@@ -19,3 +19,6 @@
 ** BE SURE TO UPLOAD TO REPO LATER **
 ## Coc TS
 * Install coc-tsserver, coc-tslint-plugin
+## Coc Go
+* Install gopls
+* Follow guide on Language Servers section of coc.nvim wiki
