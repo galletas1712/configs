@@ -24,8 +24,8 @@ set number
 set relativenumber
 set mouse=a
 syntax on
-set background=dark
-colorscheme afterglow
+" set background=dark
+colorscheme monokai
 
 " Plugin settings
 let g:rustfmt_autosave = 1

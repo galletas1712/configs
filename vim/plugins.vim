@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 " GUI
-Plug 'danilo-augusto/vim-afterglow'
+Plug 'szawinis/vim-monokai'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'pR0Ps/molokai-dark' " Seems to have a problem which inverts
 " highlighted brackets
@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
 Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
 
 " Lang
 Plug 'rust-lang/rust.vim' " Requires further setup
@@ -22,6 +23,12 @@ Plug 'leafgarland/typescript-vim' " Requires further setup
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
+" NERDTree auto-open if no file specified
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endi
+
+" NERDTREE toggle
+nnoremap <leader>nt :NERDTreeToggle<CR>
 
 " fzf.vim Files preview
 command! -bang -nargs=? -complete=dir Files
@@ -55,14 +62,14 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader><leader>[g <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader><leader>]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader><leader>gd <Plug>(coc-definition)
+nmap <silent> <leader><leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader><leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader><leader>gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> <leader><leader>sd :call <SID>show_documentation()<CR>
