@@ -21,5 +21,8 @@
         "'",
         "\"",
         "`"
+    ],
+    "coc.preferences.formatOnSaveFiletypes": [
+        "dart"
     ]
 }

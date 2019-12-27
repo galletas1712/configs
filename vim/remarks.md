@@ -22,3 +22,9 @@
 ## Coc Go
 * Install gopls
 * Follow guide on Language Servers section of coc.nvim wiki
+## Coc flutter
+* Install coc-flutter
+* Install dart-vim-plugin from dart-lang
+## Coc Cpp
+* Install ccls
+* Follow guide on language servers section of ccls - coc.nvim wiki

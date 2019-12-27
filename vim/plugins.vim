@@ -1,9 +1,6 @@
 call plug#begin('~/.vim/plugged')
 " GUI
 Plug 'szawinis/vim-monokai'
-" Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'pR0Ps/molokai-dark' " Seems to have a problem which inverts
-" highlighted brackets
 
 " Editor behaviors
 Plug 'andymass/vim-matchup'
@@ -20,6 +17,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim' " Requires further setup
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Requires further setup
 Plug 'leafgarland/typescript-vim' " Requires further setup
+Plug 'dart-lang/dart-vim-plugin' " Goes with coc-flutter
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
@@ -33,9 +31,6 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " fzf.vim Files preview
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
-
-" vim afterglow background option
-let g:afterglow_inherit_background=1
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
