@@ -27,4 +27,4 @@
 * Install dart-vim-plugin from dart-lang
 ## Coc Cpp
 * Install ccls
-* Follow guide on language servers section of ccls - coc.nvim wiki
+* Follow [this](https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/) article and [this](https://www.reddit.com/r/neovim/comments/e6uhhf/using_ccls_server_with_cocnvim_for_c_development/)
