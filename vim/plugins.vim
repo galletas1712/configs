@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 " GUI
-Plug 'szawinis/vim-monokai'
+" Plug 'szawinis/vim-monokai'
+Plug 'arzg/vim-colors-xcode'
 
 " Editor behaviors
 Plug 'andymass/vim-matchup'

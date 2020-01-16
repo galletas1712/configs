@@ -25,7 +25,7 @@ set relativenumber
 set mouse=a
 syntax on
 " set background=dark
-colorscheme monokai
+colorscheme xcodedark
 
 " Plugin settings
 let g:rustfmt_autosave = 1
