@@ -17,11 +17,12 @@ Plug 'scrooloose/nerdtree'
 " Lang
 Plug 'rust-lang/rust.vim' " Requires further setup
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Requires further setup
-Plug 'leafgarland/typescript-vim' " Requires further setup
-Plug 'dart-lang/dart-vim-plugin' " Goes with coc-flutter
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
+" rustfmt
+let g:rustfmt_autosave = 1
+
 " NERDTree auto-open if no file specified
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endi

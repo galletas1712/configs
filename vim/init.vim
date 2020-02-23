@@ -27,9 +27,6 @@ syntax on
 " set background=dark
 colorscheme xcodedark
 
-" Plugin settings
-let g:rustfmt_autosave = 1
-
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
 " if hidden is not set, TextEdit might fail.
