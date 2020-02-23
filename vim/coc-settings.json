@@ -41,6 +41,11 @@
                         "-isystem", "/usr/local/include/c++/8.2.0/x86_64-apple-darwin18.2.0",
                         "-std=c++14"
                     ]
+                },
+                "diagnostics": {
+                    "onOpen": 0,
+                    "onChange": 1,
+                    "onSave": 0
                 }
             }
         }
