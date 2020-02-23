@@ -20,8 +20,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " Requires further setup
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
-" rustfmt
-let g:rustfmt_autosave = 1
 
 " NERDTree auto-open if no file specified
 " autocmd StdinReadPre * let s:std_in=1
@@ -145,9 +143,3 @@ nnoremap <silent> <leader><leader>j  :<C-u>CocNext<CR>
 nnoremap <silent> <leader><leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <leader><leader>p  :<C-u>CocListResume<CR>
-
-" Disable auto-pair quotes for vim
-autocmd FileType vim let b:coc_pairs_disabled = ['"']
-autocmd FileType rust let b:coc_pairs_disabled = ["'"]
-
-
