@@ -26,6 +26,7 @@ set mouse=a
 syntax on
 " set background=dark
 colorscheme xcodedark
+let &t_ut = '' "needed to make background properly displayed in kitty terminal
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
