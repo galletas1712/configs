@@ -34,12 +34,13 @@ command! -bang -nargs=? -complete=dir Files
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
-" Install missing plugins on server start
+" Install missing plugins
+" Need to run rustup component add rls rust-analysis rust-src on install
 let g:coc_global_extensions = [
             \'coc-pairs',
             \'coc-json',
             \'coc-actions',
-            \'coc-rls', " Need to run rustup component add rls rust-analysis rust-src
+            \'coc-rls',
             \]
 
 " Use tab for trigger completion with characters ahead and navigate.
