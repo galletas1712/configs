@@ -1,10 +1,5 @@
 {
     "languageserver": {
-        "rust": {
-            "command": "ra_lsp_server",
-            "filetypes": ["rust"],
-            "rootPatterns": ["Cargo.toml"]
-        },
         "golang": {
             "command": "gopls",
             "args": ["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],
@@ -37,8 +32,8 @@
                         "-isystem", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include",
                         "-isystem", "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
                         "-isystem", "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include",
-                        "-isystem", "/usr/local/include/c++/8.2.0",
-                        "-isystem", "/usr/local/include/c++/8.2.0/x86_64-apple-darwin18.2.0",
+                        "-isystem", "/usr/local/include/c++/9.3.0",
+                        "-isystem", "/usr/local/include/c++/9.3.0/x86_64-apple-darwin19",
                         "-std=c++14"
                     ]
                 },

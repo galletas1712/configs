@@ -9,14 +9,14 @@ Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-commentary'
 
 " Editor tools
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
-Plug 'junegunn/fzf.vim' " Further install ag to search code
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
+" Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Lang
-Plug 'rust-lang/rust.vim' " Requires further setup
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Requires further setup
+" Plug 'rust-lang/rust.vim' " Requires further setup
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
@@ -33,6 +33,14 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
+
+" Install missing plugins on server start
+let g:coc_global_extensions = [
+            \'coc-pairs',
+            \'coc-json',
+            \'coc-actions',
+            \'coc-rls', " Need to run rustup component add rls rust-analysis rust-src
+            \]
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
