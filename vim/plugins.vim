@@ -76,7 +76,7 @@ nmap <silent> <leader><leader>gi <Plug>(coc-implementation)
 nmap <silent> <leader><leader>gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> <leader><leader>sd :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -85,6 +85,10 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Scrolling in a floating window
+nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
