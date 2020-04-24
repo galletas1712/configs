@@ -16,7 +16,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Lang
-" Plug 'rust-lang/rust.vim' " Requires further setup
+Plug 'rust-lang/rust.vim' " Requires further setup
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Might actually have to run :UpdateRemotePlugins manually after :PlugInstall
+Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
@@ -31,6 +33,21 @@ nnoremap <leader>nt :NERDTreeToggle<CR>
 " fzf.vim Files preview
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
+
+" Opt out of semshi column
+let g:semshi#error_sign = v:false
+
+" Opt out of vim-go features (gd and K for documentation)
+let g:go_def_mapping_enabled = 0
+let g:go_doc_keywordprg_enabled = 1 " Actually K for documentation in vim-go is better than coc.nvim
+let g:go_doc_popup_window = 1 
+
+" Vim-go syntax highlighting config
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_types = 1
+let g:go_highlight_extra_types = 1
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
@@ -66,14 +83,14 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
-nmap <silent> <leader><leader>[g <Plug>(coc-diagnostic-prev)
-nmap <silent> <leader><leader>]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
-nmap <silent> <leader><leader>gd <Plug>(coc-definition)
-nmap <silent> <leader><leader>gy <Plug>(coc-type-definition)
-nmap <silent> <leader><leader>gi <Plug>(coc-implementation)
-nmap <silent> <leader><leader>gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -94,11 +111,11 @@ nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <leader><leader>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader><leader>f  <Plug>(coc-format-selected)
-nmap <leader><leader>f  <Plug>(coc-format-selected)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -109,13 +126,13 @@ augroup mygroup
 augroup end
 
 " Remap for do codeAction of selected region, ex: `<leader><leader>aap` for current paragraph
-xmap <leader><leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader><leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader><leader>ac  <Plug>(coc-codeaction)
+nmap <leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader><leader>qf  <Plug>(coc-fix-current)
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
@@ -141,18 +158,18 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader><leader>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>ad  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <leader><leader>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <leader><leader>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader><leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workleader symbols
-nnoremap <silent> <leader><leader>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <leader><leader>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <leader><leader>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <leader><leader>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
