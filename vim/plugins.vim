@@ -13,6 +13,7 @@ Plug 'tpope/vim-commentary'
 " Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Lang
@@ -40,7 +41,7 @@ let g:semshi#error_sign = v:false
 " Opt out of vim-go features (gd and K for documentation)
 let g:go_def_mapping_enabled = 0
 let g:go_doc_keywordprg_enabled = 1 " Actually K for documentation in vim-go is better than coc.nvim
-let g:go_doc_popup_window = 1 
+let g:go_doc_popup_window = 0 
 
 " Vim-go syntax highlighting config
 let g:go_highlight_functions = 1
@@ -48,6 +49,19 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_space_tab_error = 1
 let g:go_highlight_types = 1
 let g:go_highlight_extra_types = 1
+
+" Lightline configuration for coc.nvim
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component_function': {
+\   'cocstatus': 'coc#status'
+\ },
+\ }
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 
@@ -59,7 +73,12 @@ let g:coc_global_extensions = [
             \'coc-actions',
             \'coc-rls',
             \'coc-tsserver',
+            \'coc-prettier',
+            \'coc-python',
             \]
+
+" :Prettier to format TS/JS
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

@@ -2,12 +2,16 @@
 " TODO: check for space conflicts
 let mapleader = "\<Space>"
 
-" ; as :
-" Consider changing to recursive?
+" ; as : in normal mode
+" Doesn't affect things like g; either way
 nnoremap ; :
 
+" To close coc.nvim windows (e.g. Diagnostics), we also have to set this in
+" coc-settings.json
+noremap <C-c> <esc>
+
 " FZF
-nnoremap <leader>fo :Files<cr>
+" nnoremap <leader>fo :Files<cr>
 
 " Stop search
 vnoremap <c-h> :nohlsearch<cr>
@@ -26,19 +30,7 @@ inoremap <right> <nop>
 " Scrolling
 " TODO
 
-" Buffer management
-nnoremap <leader>bn :bn<cr>
-nnoremap <leader>bp :bp<cr>
-nnoremap <leader>bd :bd<cr>
-
-" Tab management
-nnoremap <leader>tp :tabprevious<cr>
-nnoremap <leader>tn :tabnext<cr>
-nnoremap <leader>tc :tabnew<cr>
-
 " Quick actions
-nnoremap <leader>w :w<cr>
-nnoremap <leader>e :wq<cr>
 nnoremap <leader>qq :q!<cr>
 
 " System clipboard

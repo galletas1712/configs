@@ -1,6 +1,11 @@
 set nocompatible
 filetype plugin indent on
 
+" Allow searching in subfolders
+set path+=**
+" Display all matching files in tab menu
+set wildmenu
+
 " Load configurations {
     let repo_dir = $HOME . '/configs/'
     let base_dir = repo_dir . 'vim/'
