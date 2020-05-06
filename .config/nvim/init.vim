@@ -7,8 +7,7 @@ set path+=**
 set wildmenu
 
 " Load configurations {
-    let repo_dir = $HOME . '/configs/'
-    let base_dir = repo_dir . 'vim/'
+    let base_dir = $HOME . '/.config/nvim/'
     let base_cmd = "source " . base_dir
     " Keybindings
     execute base_cmd . 'keybindings.vim'
