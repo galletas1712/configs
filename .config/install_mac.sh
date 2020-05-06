@@ -9,9 +9,10 @@ ln -s ~/config/alacritty ~/.config/alacritty
 # Tmux
 rm ~/.tmux.conf
 ln -s ~/config/tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.local/tmux-plugins/tpm
 
 # Vim
-brew install ctags python3 # RUSTUP
+brew install npm yarn fzf jq ctags python3 rustup
 pip3 install neovim yapf pylint flake8
 rm -r ~/.config/nvim
 ln -s ~/configs/vim ~/.config/nvim
