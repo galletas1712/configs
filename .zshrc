@@ -1,0 +1,1 @@
+/Users/szawinis/configs/zshrc
