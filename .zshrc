@@ -36,11 +36,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Checks for tmux existence, interactive shell, and non-recursion then starts tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
-
 # TODO: screw compinstall and do it yourself
 # TODO: shouldn't environment variables go in .zshenv?
 # TODO: move into $XDG_BASE_DIRECTORY
