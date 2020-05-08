@@ -30,6 +30,9 @@ set mouse=a
 syntax on
 " set background=dark
 colorscheme xcodedark
+" Make vim look opaque and sexy
+hi NonText ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
 let &t_ut = '' "needed to make background properly displayed in kitty terminal
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
