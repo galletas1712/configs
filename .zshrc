@@ -3,7 +3,6 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # for Python modules
 
-
 export RANGER_DEFAULT_LOAD_RC=FALSE
 export VISUAL=nvim
 export EDITOR=nvim

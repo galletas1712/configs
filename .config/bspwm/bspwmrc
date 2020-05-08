@@ -17,4 +17,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 feh --bg-fill ~/.config/bspwm/background.jpg &
-compton &
+picom &
