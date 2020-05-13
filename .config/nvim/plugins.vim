@@ -8,15 +8,18 @@ Plug 'andymass/vim-matchup'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-commentary'
 
+" Lines
+Plug 'itchyny/lightline.vim'
+
 " Editor tools
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
-" Plug 'junegunn/fzf.vim' " Further install ag to search code
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
+Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
-Plug 'itchyny/lightline.vim'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'moll/vim-bbye'
 
 " Lang
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'rust-lang/rust.vim' " Requires further setup
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Might actually have to run :UpdateRemotePlugins manually after :PlugInstall
 Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
@@ -65,6 +68,8 @@ let g:lightline = {
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
+" Sane buffer drops
+nnoremap <leader>qb :Bdelete<CR>
 
 " Install missing plugins
 " Need to run rustup component add rls rust-analysis rust-src on install
@@ -160,6 +165,10 @@ xmap if <Plug>(coc-funcobj-i)
 xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
+xmap ic <Plug>(coc-classobj-i)
+omap ic <Plug>(coc-classobj-i)
+xmap ac <Plug>(coc-classobj-a)
+omap ac <Plug>(coc-classobj-a)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -175,7 +184,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader>ad  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>da  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -185,8 +194,11 @@ nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workleader symbols
 nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
+" nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
+" nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
+" nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
+
+" Coc-explorer
+nnoremap <leader>e :CocCommand explorer<CR>

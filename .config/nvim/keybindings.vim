@@ -10,9 +10,6 @@ nnoremap ; :
 " coc-settings.json
 noremap <C-c> <esc>
 
-" FZF
-" nnoremap <leader>fo :Files<cr>
-
 " Stop search
 vnoremap <c-h> :nohlsearch<cr>
 nnoremap <c-h> :nohlsearch<cr>
@@ -27,13 +24,12 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-" Scrolling
-" TODO
-
 " Quick actions
-nnoremap <leader>qq :q!<cr>
+nnoremap <leader>qq :qa!<cr>
 
 " System clipboard
+" This is pretty lucky. The <leader>d prefixes in normal mode are only used
+" with other modifiers so we don't get a lag :)
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>d "+d

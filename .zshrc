@@ -1,9 +1,6 @@
 # Setup dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
 
-alias vim="nvim"
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
 HISTFILE=~/.cache/histfile
 HISTSIZE=1000
 SAVEHIST=1000
@@ -19,3 +16,5 @@ compinit -d ~/.cache/zsh/zcompdump-$ZSH_VERSION
 
 # TODO: shouldn't environment variables go in .zshenv?
 # TODO: move into $XDG_BASE_DIRECTORY
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
