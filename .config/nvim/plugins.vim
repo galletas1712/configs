@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/plugged')
 " GUI
 " Plug 'szawinis/vim-monokai'
-Plug 'arzg/vim-colors-xcode'
+" Plug 'arzg/vim-colors-xcode'
+Plug 'kaicataldo/material.vim'
 
 " Editor behaviors
 Plug 'andymass/vim-matchup'
@@ -14,7 +15,6 @@ Plug 'itchyny/lightline.vim'
 " Editor tools
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat for syntax highlighting in preview
 Plug 'junegunn/fzf.vim' " Further install ag to search code
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'moll/vim-bbye'
 
@@ -24,6 +24,7 @@ Plug 'rust-lang/rust.vim' " Requires further setup
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Might actually have to run :UpdateRemotePlugins manually after :PlugInstall
 Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 Plug 'tranvansang/octave.vim'
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
@@ -56,7 +57,7 @@ let g:go_highlight_extra_types = 1
 
 " Lightline configuration for coc.nvim
 let g:lightline = {
-\ 'colorscheme': 'wombat',
+\ 'colorscheme': 'material_vim',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
@@ -199,6 +200,3 @@ nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 " nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
-
-" Coc-explorer
-nnoremap <leader>e :CocCommand explorer<CR>
