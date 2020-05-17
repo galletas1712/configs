@@ -17,6 +17,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat fo
 Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'scrooloose/nerdtree'
 Plug 'moll/vim-bbye'
+Plug 'junegunn/goyo.vim'
 
 " Lang
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }

@@ -22,8 +22,9 @@ execute base_cmd . 'plugins.vim'
 " Editor settings
 set shiftwidth=4
 set tabstop=4
-set softtabstop=4
+set softtabstop=0
 set expandtab
+set smarttab
 set backspace=indent,eol,start
 set ttimeoutlen=100
 
@@ -34,7 +35,7 @@ set mouse=a
 syntax on
 
 " Colorscheme
-let g:material_theme_style = 'darker'
+let g:material_theme_style = 'palenight'
 colorscheme material
 
 " Opacity
