@@ -25,6 +25,7 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " Might actually have to 
 Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 Plug 'tranvansang/octave.vim'
 Plug 'jparise/vim-graphql'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------

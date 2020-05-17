@@ -19,3 +19,5 @@ bspc rule -a Screenkey manage=off
 feh --no-fehbg --bg-fill ~/.config/bspwm/background.jpg &
 picom &
 polybar example &
+xrandr --dpi 192
+dbus-launch dropbox start
