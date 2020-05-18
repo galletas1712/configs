@@ -1,6 +1,10 @@
 # Setup dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
 
+alias vim="nvim"
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias sudo="sudo "
+
 HISTFILE=~/.cache/histfile
 HISTSIZE=1000
 SAVEHIST=1000

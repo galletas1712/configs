@@ -17,6 +17,3 @@ export GNUPGHOME="$HOME/.config/gpg"
 export GDK_SCALE=2
 export QT_SCALE_FACTOR=1
 
-alias vim="nvim"
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias sudo="sudo "
