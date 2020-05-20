@@ -149,34 +149,39 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Material Theme)
+# Colors (Tomorrow Night)
 colors:
   # Default colors
   primary:
-    background: '#1e282d'
-    foreground: '#c4c7d1'
+    background: '#1d1f21'
+    foreground: '#c5c8c6'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '#1d1f21'
+    cursor: '#ffffff'
 
   # Normal colors
   normal:
-    black:   '#666666'
-    red:     '#eb606b'
-    green:   '#c3e88d'
-    yellow:  '#f7eb95'
-    blue:    '#80cbc4'
-    magenta: '#ff2f90'
-    cyan:    '#aeddff'
-    white:   '#ffffff'
+    black:   '#1d1f21'
+    red:     '#cc6666'
+    green:   '#b5bd68'
+    yellow:  '#e6c547'
+    blue:    '#81a2be'
+    magenta: '#b294bb'
+    cyan:    '#70c0ba'
+    white:   '#373b41'
 
   # Bright colors
   bright:
-    black:   '#ff262b'
-    red:     '#eb606b'
-    green:   '#c3e88d'
-    yellow:  '#f7eb95'
-    blue:    '#7dc6bf'
-    magenta: '#6c71c4'
-    cyan:    '#35434d'
-    white:   '#ffffff'
+    black:   '#666666'
+    red:     '#ff3334'
+    green:   '#9ec400'
+    yellow:  '#f0c674'
+    blue:    '#81a2be'
+    magenta: '#b77ee0'
+    cyan:    '#54ced6'
+    white:   '#282a2e'
 
 # Visual Bell
 #
