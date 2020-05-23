@@ -88,3 +88,6 @@ alias vim="nvim"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias sudo="sudo "
 
+export GPG_TTY=$(tty)
+export GNUPGHOME="$HOME/.config/gpg"
+
