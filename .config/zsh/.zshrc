@@ -1,3 +1,7 @@
+# Friendly GPG
+export GNUPGHOME="$HOME/.config/gpg"
+export GPG_TTY=$(tty)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -17,15 +21,6 @@ export ZSH="$HOME/.config/zsh/oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
@@ -41,22 +36,11 @@ COMPLETION_WAITING_DOTS="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
 HIST_STAMPS="dd/mm/yyyy"
 
 MAGIC_ENTER_GIT_COMMAND='git status'
 MAGIC_ENTER_OTHER_COMMAND='ls -lhsa .'
 
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
     zsh_reload
     vi-mode
@@ -87,7 +71,3 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrac
 alias vim="nvim"
 alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias sudo="sudo "
-
-export GNUPGHOME="$HOME/.config/gpg"
-export GPG_TTY=$(tty)
-
