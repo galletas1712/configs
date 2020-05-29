@@ -84,6 +84,7 @@ let g:coc_global_extensions = [
             \'coc-tsserver',
             \'coc-prettier',
             \'coc-python',
+            \'coc-explorer'
             \]
 
 " :Prettier to format TS/JS
@@ -189,16 +190,46 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics
 nnoremap <silent> <leader>da  :<C-u>CocList diagnostics<cr>
 " Manage extensions
-nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>ext  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cmd  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>ol  :<C-u>CocList outline<cr>
 " Search workleader symbols
-nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>sym  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 " nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 " nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 " nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
+
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\      'root-uri': '~/.vim',
+\   },
+\   'floating': {
+\      'position': 'floating',
+\   },
+\   'floatingLeftside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'floatingRightside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'simplify': {
+\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
+
+" Use preset argument to open it
+nnoremap <leader>expd :CocCommand explorer --preset .vim<CR>
+nnoremap <leader>expf :CocCommand explorer --preset floating<CR>
+
+" List all presets
+nnoremap <leader>expl :CocList explPresets
+
