@@ -27,6 +27,7 @@ Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 Plug 'tranvansang/octave.vim'
 Plug 'jparise/vim-graphql'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'jupyter-vim/jupyter-vim'
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
@@ -176,6 +177,7 @@ omap ac <Plug>(coc-classobj-a)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
+nnoremap <silent> <leader>fmt :Format<cr>
 
 " Use `:Fold` to fold current buffer
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
