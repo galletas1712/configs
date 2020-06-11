@@ -1,6 +1,6 @@
 export ZDOTDIR="$HOME/.config/zsh"
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/bin:/bin"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # for Python modules
