@@ -1,3 +1,10 @@
+" Install vim-plug if not installed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 " GUI
 " Plug 'szawinis/vim-monokai'
@@ -27,7 +34,7 @@ Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 Plug 'tranvansang/octave.vim'
 Plug 'jparise/vim-graphql'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'jupyter-vim/jupyter-vim'
+" Plug 'jupyter-vim/jupyter-vim'
 call plug#end()
 
 "-----------------------------------------------Options-----------------------------------------------------
