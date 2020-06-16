@@ -24,6 +24,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " needs bat fo
 Plug 'junegunn/fzf.vim' " Further install ag to search code
 Plug 'scrooloose/nerdtree'
 Plug 'moll/vim-bbye'
+Plug 'mihaifm/bufstop'
 Plug 'junegunn/goyo.vim'
 
 " Lang
@@ -78,10 +79,18 @@ let g:lightline = {
 \ }
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
-"-----------------------------------------------COC.NVIM----------------------------------------------------
-" Sane buffer drops
-nnoremap <leader>qb :Bdelete<CR>
+" Sane buffer deletion
+nnoremap <leader>bd :Bdelete<CR>
 
+" Bufstop
+nnoremap <leader>bm :BufstopModeFast<CR>
+nnoremap <leader>bl :Bufstop<CR>
+nnoremap <leader>bn :BufstopBack<CR>
+nnoremap <leader>bp :BufstopForward<CR>
+let g:BufstopAutoSpeedToggle = 1
+let g:BufstopDismissKey = "<esc>"
+
+"-----------------------------------------------COC.NVIM----------------------------------------------------
 " Install missing plugins
 " Need to run rustup component add rls rust-analysis rust-src on install
 let g:coc_global_extensions = [

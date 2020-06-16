@@ -2,14 +2,6 @@
 " TODO: check for space conflicts
 let mapleader = "\<Space>"
 
-" ; as : in normal mode
-" Doesn't affect things like g; either way
-nnoremap ; :
-
-" To close coc.nvim windows (e.g. Diagnostics), we also have to set this in
-" coc-settings.json
-noremap <C-c> <esc>
-
 " Stop search
 vnoremap <c-h> :nohlsearch<cr>
 nnoremap <c-h> :nohlsearch<cr>
