@@ -19,6 +19,9 @@ inoremap <right> <nop>
 " Quick actions
 nnoremap <leader>qq :qa!<cr>
 
+" Window management using <leader>w
+nmap <leader>w <c-w>
+
 " System clipboard
 " This is pretty lucky. The <leader>d prefixes in normal mode are only used
 " with other modifiers so we don't get a lag :)

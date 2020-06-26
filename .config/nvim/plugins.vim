@@ -85,8 +85,8 @@ nnoremap <leader>bd :Bdelete<CR>
 " Bufstop
 nnoremap <leader>bm :BufstopModeFast<CR>
 nnoremap <leader>bl :Bufstop<CR>
-nnoremap <leader>bn :BufstopBack<CR>
-nnoremap <leader>bp :BufstopForward<CR>
+nnoremap [b :BufstopBack<CR>
+nnoremap ]b :BufstopForward<CR>
 let g:BufstopAutoSpeedToggle = 1
 let g:BufstopDismissKey = "<esc>"
 
