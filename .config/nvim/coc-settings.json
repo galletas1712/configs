@@ -60,5 +60,7 @@
   "python.linting.pylintEnabled": true,
   "python.pythonPath": "/usr/local/bin/python3",
   "pyright.disableOrganizeImports": true,
+  "pyright.disableLanguageServices": true,
+  "pyright.disableCompletion": true,
   "pyright.useLibraryCodeForTypes": false
 }
