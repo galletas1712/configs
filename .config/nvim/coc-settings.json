@@ -47,16 +47,18 @@
       }
     }
   },
-  "rust.wait_to_build": 0,
-  "python.jediEnabled": false,
-  "python.formatting.provider": "yapf",
-  "python.linting.pylintEnabled": true,
-  "python.pythonPath": "python3",
   "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
   "list.normalMappings": {
     "<C-c>": "do:exit"
   },
   "list.insertMappings": {
     "<C-c>": "do:exit"
-  }
+  },
+  "rust.wait_to_build": 0,
+  "python.jediEnabled": false,
+  "python.formatting.provider": "yapf",
+  "python.linting.pylintEnabled": true,
+  "python.pythonPath": "/usr/local/bin/python3",
+  "pyright.disableOrganizeImports": true,
+  "pyright.useLibraryCodeForTypes": false
 }
