@@ -58,9 +58,5 @@
   "python.jediEnabled": false,
   "python.formatting.provider": "yapf",
   "python.linting.pylintEnabled": true,
-  "python.pythonPath": "/usr/local/bin/python3",
-  "pyright.disableOrganizeImports": false,
-  "pyright.disableLanguageServices": false,
-  "pyright.disableCompletion": false,
-  "pyright.useLibraryCodeForTypes": false
+  "python.pythonPath": "/usr/local/bin/python3"
 }
