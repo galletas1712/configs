@@ -83,7 +83,7 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 nnoremap <leader>bd :Bdelete<CR>
 
 " Bufstop
-nnoremap <leader>bm :BufstopModeFast<CR>
+nnoremap <leader>bb :BufstopModeFast<CR>
 nnoremap <leader>bl :Bufstop<CR>
 nnoremap [b :BufstopBack<CR>
 nnoremap ]b :BufstopForward<CR>
