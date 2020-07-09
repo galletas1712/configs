@@ -35,6 +35,7 @@ Plug 'fatih/vim-go' " Needs :GoInstallBinaries after :PlugInstall
 Plug 'tranvansang/octave.vim'
 Plug 'jparise/vim-graphql'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'ihsanturk/neuron.vim'
 " Plug 'jupyter-vim/jupyter-vim'
 call plug#end()
 
@@ -89,6 +90,9 @@ nnoremap [b :BufstopBack<CR>
 nnoremap ]b :BufstopForward<CR>
 let g:BufstopAutoSpeedToggle = 1
 let g:BufstopDismissKey = "<esc>"
+
+" neuron.vim
+let g:zkdir = $HOME.'/Dropbox/zettelkasten/'
 
 "-----------------------------------------------COC.NVIM----------------------------------------------------
 " Install missing plugins

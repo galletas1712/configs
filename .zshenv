@@ -35,3 +35,4 @@ export LANGUAGE=en_US.UTF-8
 export GDK_SCALE=2
 export QT_SCALE_FACTOR=1
 
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

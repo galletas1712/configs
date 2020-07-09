@@ -57,6 +57,5 @@
   "rust.wait_to_build": 0,
   "python.jediEnabled": false,
   "python.formatting.provider": "yapf",
-  "python.linting.pylintEnabled": true,
-  "python.pythonPath": "/usr/local/bin/python3"
+  "python.linting.pylintEnabled": true
 }
