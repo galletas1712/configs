@@ -19,7 +19,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Emacs state=tiled
 bspc rule -a Zathura state=tiled
 
-feh --no-fehbg --bg-fill ~/.config/bspwm/background.jpg &
+feh --no-fehbg --bg-fill ~/.config/bspwm/parasite_eve.jpg &
 picom &
 polybar example &
 xrandr --dpi 192 &
