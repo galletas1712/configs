@@ -2,6 +2,7 @@
 export GNUPGHOME="$HOME/.config/gpg"
 export GPG_TTY=$(tty)
 
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -66,10 +67,10 @@ source $ZSH/oh-my-zsh.sh
 unset LESS
 
 # Setup dotfiles
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
+git --git-dir=$HOME/.local/dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
 
 alias vim="nvim"
-alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.local/dotfiles --work-tree=$HOME"
 alias sudo="sudo "
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
